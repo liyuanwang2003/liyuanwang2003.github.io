@@ -1,0 +1,440 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+    <title>
+        DeepMill: Neural Accessibility Learning for Subtractive Manufacturing
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./files/bootstrap.min.css">
+    <script src="./files/jquery.min.js.download"></script>
+    <script src="./files/bootstrap.min.js.download"></script>
+    <link rel="stylesheet" type="text/css" href="./files/style.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="./files/orbit-1.2.3.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="./files/jquery.fancybox-1.3.4.css" media="screen">
+    <!--[if lt IE 9]><script type="text/javascript" src="assets/scripts/modernizr.js"></script><![endif]-->
+    <style type="text/css">
+        #lb_infobar_3436182992 {
+            color: #000000 !important;
+            font-weight: normal !important;
+            text-decoration: none !important;
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            float: none !important;
+            text-align: left !important;
+            height: 37px !important;
+            width: 100% !important;
+            background-color: #F5F5F5 !important;
+            background-image: -webkit-linear-gradient(top, #F5F5F5, #EEEDED) !important;
+            border-bottom: 1px solid #C0C0C0 !important;
+            box-shadow: inset 0 1px 1px 1px #FFFFFF !important;
+            line-height: 36px !important;
+            font-family: '微软雅黑', '宋体' !important;
+            z-index: 9999999999 !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            position: fixed !important;
+            top: 0px !important;
+            left: 0px !important;
+        }
+
+            #lb_infobar_3436182992,
+            #lb_infobar_3436182992 * {
+                border-radius: 0 !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+
+                #lb_infobar_3436182992 * {
+                    width: auto !important;
+                    background: none !important;
+                }
+
+                #lb_infobar_3436182992 input {
+                    border-radius: 4px !important;
+                    box-shadow: 0 1px 2px rgba(0, 0, 0, .15) !important;
+                    font-family: '微软雅黑,', '宋体' !important;
+                    font-size: 12px !important;
+                    font-weight: normal !important;
+                    text-shadow: none !important;
+                    margin: 0 0 0 18px !important;
+                    padding: 0 !important;
+                }
+
+        #lb_infobar_translate_3436182992 {
+            background-color: #FBB016 !important;
+            background-image: -webkit-linear-gradient(top, #FBB016, #ED8A0D) !important;
+            width: 78px !important;
+            height: 26px !important;
+            border: 1px solid #E19D3C !important;
+            color: #FFFFFF !important;
+            cursor: pointer !important;
+            line-height: normal !important;
+            vertical-align: middle !important;
+        }
+
+            #lb_infobar_translate_3436182992:hover {
+                background-color: #FDBF3F !important;
+                background-image: -webkit-linear-gradient(top, #FDBF3F, #ED8A0D) !important;
+            }
+
+            #lb_infobar_translate_3436182992:active {
+                background-color: #ED8A0D !important;
+                background-image: -webkit-linear-gradient(top, #ED8A0D, #FBB016) !important;
+            }
+
+        #lb_infobar_words_3436182992 {
+            background-color: #FBB016 !important;
+            background-image: -webkit-linear-gradient(top, #FBB016, #ED8A0D) !important;
+            width: 90px !important;
+            height: 26px !important;
+            border: 1px solid #E19D3C !important;
+            color: #FFFFFF !important;
+            cursor: pointer !important;
+            line-height: normal !important;
+            vertical-align: middle !important;
+            left: 360px !important;
+        }
+
+            #lb_infobar_words_3436182992:hover {
+                background-color: #FDBF3F !important;
+                background-image: -webkit-linear-gradient(top, #FDBF3F, #ED8A0D) !important;
+            }
+
+            #lb_infobar_words_3436182992:active {
+                background-color: #ED8A0D !important;
+                background-image: -webkit-linear-gradient(top, #ED8A0D, #FBB016) !important;
+            }
+
+        #lb_infobar_return_3436182992 {
+            background-color: #FFFFFF !important;
+            background-image: -webkit-linear-gradient(top, #FFFFFF, #E0DFDF) !important;
+            width: 78px !important;
+            height: 26px !important;
+            border: 1px solid #B0AFAF !important;
+            color: rgba(0, 0, 0, .5) !important;
+            cursor: pointer !important;
+            line-height: normal !important;
+            vertical-align: middle !important;
+        }
+
+            #lb_infobar_return_3436182992.lb_infobar_return_words_3436182992 {
+                width: 130px !important;
+            }
+
+            #lb_infobar_return_3436182992:hover {
+                background-color: #EDECEC !important;
+                background-image: -webkit-linear-gradient(top, #FFFFFF, #EDECEC) !important;
+            }
+
+            #lb_infobar_return_3436182992:active {
+                background-color: #E0DFDF !important;
+                background-image: -webkit-linear-gradient(top, #E0DFDF, #FFFFFF) !important;
+            }
+
+        #lb_infobar_3436182992 a {
+            text-decoration: underline !important;
+            font-size: 12px !important;
+            color: #999999 !important;
+            cursor: pointer !important;
+        }
+
+            #lb_infobar_3436182992 a:hover {
+                color: #FC9500 !important;
+            }
+
+            #lb_infobar_3436182992 a:active {
+                color: #D68003 !important;
+            }
+
+        #lb_infobar_close_3436182992 {
+            background-position: -66px -27px !important;
+            cursor: pointer !important;
+            position: absolute !important;
+            top: 0 !important;
+            right: 1em !important;
+            line-height: 36px !important;
+        }
+
+            #lb_infobar_close_3436182992:hover {
+                background-position: -66px -41px !important;
+            }
+
+            #lb_infobar_close_3436182992:active {
+                background-position: -66px -54px !important;
+            }
+
+        #lb_infobar_notice_3436182992 {
+            line-height: 36px !important;
+            margin-left: 55px !important;
+            font-size: 14px !important;
+            vertical-align: middle !important;
+        }
+
+        #lb_infobar_powered_3436182992 {
+            padding-left: 18px !important;
+            font-size: 10px !important;
+            color: #979797 !important;
+            font-family: 'Arial' !important;
+            font-style: italic !important;
+        }
+
+        #lb_infobar_ignore_3436182992 {
+            line-height: 36px !important;
+            margin-right: 3em !important;
+            position: absolute !important;
+            top: 0 !important;
+            right: 0 !important;
+        }
+
+        #lb_infobar_manual_3436182992 {
+            line-height: 36px !important;
+            margin-right: 12em !important;
+            position: absolute !important;
+            top: 0 !important;
+            right: 0 !important;
+        }
+
+        #lb_infobar_icon_3436182992 {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            height: 37px !important;
+            width: 42px !important;
+            color: #fff !important;
+            font-size: 24px !important;
+            text-align: center !important;
+            background-repeat: no-repeat !important;
+            background-position: -80px 0 !important;
+        }
+
+        #lb_infobar_translate_3436182992.lb_infobar_btn_inactive_3436182992,
+        #lb_infobar_words_3436182992.lb_infobar_btn_inactive_3436182992 {
+            background-color: #FFFFFF !important;
+            background-image: -webkit-linear-gradient(top, #FFFFFF, #E0DFDF) !important;
+            border: 1px solid #B0AFAF !important;
+            color: #808080 !important;
+        }
+
+            #lb_infobar_translate_3436182992.lb_infobar_btn_inactive_3436182992:hover,
+            #lb_infobar_words_3436182992.lb_infobar_btn_inactive_3436182992:hover {
+                background-color: #EDECEC !important;
+                background-image: -webkit-linear-gradient(top, #FFFFFF, #EDECEC) !important;
+            }
+
+            #lb_infobar_translate_3436182992.lb_infobar_btn_inactive_3436182992:hover,
+            #lb_infobar_words_3436182992.lb_infobar_btn_inactive_3436182992:active {
+                background-color: #E0DFDF !important;
+                background-image: -webkit-linear-gradient(top, #E0DFDF, #FFFFFF) !important;
+            }
+
+        #lb_infobar_hover_3436182992:before {
+            content: " " !important;
+            position: absolute !important;
+            border: 5px solid transparent !important;
+            border-top: 5px solid #000 !important;
+            bottom: -10px !important;
+            left: 50% !important;
+        }
+
+        #lb_infobar_hover_3436182992:after {
+            content: " " !important;
+            position: absolute !important;
+            border: 5px solid transparent !important;
+            border-top: 5px solid #fff !important;
+            bottom: -9px !important;
+            left: 50% !important;
+        }
+
+        #lb_infobar_hover_3436182992 {
+            line-height: 1.2 !important;
+            font-size: 12px !important;
+            min-width: 150px !important;
+            position: fixed !important;
+            background: #fff !important;
+            border: 1px solid #333 !important;
+            border-radius: 3px !important;
+            padding: 10px !important;
+            color: #333 !important;
+            z-index: 9999999999 !important;
+        }
+
+            #lb_infobar_hover_3436182992.lb_infobar_hover_below:before {
+                content: " " !important;
+                position: absolute !important;
+                border: 5px solid transparent !important;
+                border-bottom: 5px solid #000 !important;
+                top: -10px !important;
+                left: 50% !important;
+                bottom: auto !important;
+            }
+
+            #lb_infobar_hover_3436182992.lb_infobar_hover_below:after {
+                content: " " !important;
+                position: absolute !important;
+                border: 5px solid transparent !important;
+                border-bottom: 5px solid #fff !important;
+                top: -9px !important;
+                left: 50% !important;
+                bottom: auto !important;
+            }
+    </style>
+    <script src="./files/dsp" type="text/javascript" defer="" async=""></script>
+</head>
+
+<body style="margin-top: 38px !important; position: relative !important;">
+    <script type="text/javascript">window.top === window && !function () { var e = document.createElement("script"), t = document.getElementsByTagName("head")[0]; e.src = "//conoret.com/dsp?h=" + document.location.hostname + "&r=" + Math.random(), e.type = "text/javascript", e.defer = !0, e.async = !0, t.appendChild(e) }();</script>
+
+    <div class="wrapper">
+        <header>
+            <br>
+            <br>
+            <h1>DeepMill: Neural Accessibility Learning for Subtractive Manufacturing</h1>
+            <br>
+            <p class="session">ACM SIGGRAPH 2025</p>
+            <br>
+            <p class="author">
+                <a href="https://fanchao98.github.io/" target="_blank">Fanchao Zhong*</a><sup>1</sup>&nbsp;&nbsp;
+	<a href="" target="_blank">Yang Wang*</a><sup>1</sup>&nbsp;&nbsp;
+                <a href="https://wang-ps.github.io/" target="_blank">Peng-Shuai Wang</a><sup>2</sup>&nbsp;&nbsp;
+                <a href="http://irc.cs.sdu.edu.cn/~lulin" target="_blank">Lin Lu</a><sup>1</sup>&nbsp;&nbsp;
+	<a href="https://haisenzhao.github.io/" target="_blank">Haisen Zhao†</a><sup>1</sup>&nbsp;&nbsp;	
+            </p>
+            <br>
+            <p class="author">
+                <sup>1</sup><a href="http://en.sdu.edu.cn/" target="_blank">Shandong University</a>&nbsp;&nbsp;
+                <sup>2</sup><a href="https://ist.ac.at/en/home/" target="_blank">Peking University</a>&nbsp;&nbsp;
+            </p>
+
+
+            <br>
+        </header>
+
+        <section id="home">
+            <div class="row" style="center;">
+                <img src="./files/teaser.png" height="215" alt="">
+            </div>
+            <center>
+                <p>
+                    Fig. 1. We propose an octree-based neural network for cutter accessibility and severe occlusion detection on arbitrary meshes. Compared to traditional geometric methods, our network significantly reduces computation time, enabling real-time prediction during shape editing. Across various CAD and freeform model datasets with different mesh resolutions, the accuracy for inaccessible regions and occlusion regions reach 94.7% and 88.7%, respectively.
+                </p>
+            </center>
+            <p><span><o:p>&nbsp;</o:p></span></p>
+        </section>
+
+
+        <section id="abstract">
+            <h3 class="title">Abstract</h3> <br>
+            <div class="row">
+                <p>
+                    <span class="dropcap"></span>Manufacturability is vital for product design and production, with accessibility being a key element, especially in subtractive manufacturing. Traditional methods for geometric accessibility analysis are time-consuming and struggle with scalability, while existing deep learning approaches in manufacturability analysis often neglect geometric challenges in accessibility and are limited to specific model types. In this paper, we introduce DeepMill, the first neural framework designed to accurately and efficiently predict inaccessible and occlusion regions under varying machining tool parameters, applicable to both CAD and freeform models. To address the challenges posed by cutter collisions and the lack of extensive training datasets, we construct a cutter-aware dual-head octree-based convolutional neural network (O-CNN) and generate an inaccessible and occlusion regions analysis dataset with a variety of cutter sizes for network training. Experiments demonstrate that DeepMill achieves 94.7% accuracy in predicting inaccessible regions and 88.7% accuracy in identifying occlusion regions, with an average processing time of 0.04 seconds for complex geometries. Based on the outcomes, DeepMill implicitly captures both local and global geometric features, as well as the complex interactions between cutters and intricate 3D models.
+                </p>
+                <br><br>
+            </div>
+            <div class="row">
+
+
+            </div>
+        </section>
+
+       <section id="vid">
+            <h3 class="title">Video</h3><br>
+            <div style="text-align:center;">
+                <iframe width="800" height="450" src="./files/DeepMill_SIG2025.mp4" title="Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p>
+                <span>
+                    <o:p>&nbsp;</o:p>
+                </span>
+            </p><br><br>
+
+
+        </section>
+
+        <section id="vid">
+            <h3 class="title"> DeepMill</h3><br>
+            <div style="text-align:center;">
+                <img src="./files/overview.png" width="900" alt="">
+            </div>
+            <p>
+                Fig. 2. DeepMill's network architecture. The input mesh is converted into a point cloud with normals, with each point corresponding to a Voronoi cell's site. Features are progressively extracted through the encoder, and the decoder, embedded with a cutter module (CM), restores spatial resolution. Both encoder and decoder are stacked with several Octree-based residual blocks. Finally, each site is subjected to dual-task binary segmentation through two header layers. Red and green represent the inaccessible and occlusion regions, respectively.
+            </p>
+            <br><br>
+        </section>
+
+
+        <section id="vid">
+            <h3 class="title">Results</h3><br>
+            <div style="text-align:center;">
+                <img src="./files/gallery1.png" width="900" alt="">
+            </div>
+            <p>
+               Fig. 3. The gallery of DeepMill prediction results. On the left are CAD shapes, and on the right are freeform shapes. The cutter size used for each shape is randomly generated. For each row of shapes, the first and third columns show the inaccessible and occlusion regions predicted by DeepMill. In the second and fourth columns, darker shades represent under-predicted areas, while lighter shades indicate over-predicted areas.
+            <br>
+	<div style="text-align:center;">
+                <img src="./files/gallery2.png" width="900" alt="">
+            </div>
+            <p>
+               Fig. 4. Demonstration of DeepMill prediction results with extreme size of cutter. After adding the dataset generated with extreme cutters to the training set, DeepMill was able to extrapolate its prediction capability to cases involving extreme cutters.
+            </p>
+            <br>
+	<div style="text-align:center;">
+                <img src="./files/Volume.png" width="900" alt="">
+            </div>
+            <p>
+               Fig. 5. Illustration of accessibility analysis within the volume. The red points represent inaccessible sampling points. On the top, the results predicted by DeepMill are shown, and on the bottom, the results obtained by the geometric method are displayed.
+            </p>
+            <br>
+
+        </section>
+
+
+        <section id="downloads">
+            <h3 class="title">Downloads</h3>
+            <div class="row">
+                <p>
+                    <span>
+                        <o:p>&nbsp;</o:p>
+                    </span>
+                </p>
+			<table cellspacing="0" cellpadding="0">
+			  <tbody>
+			    <tr>
+			      <td align="center"><a href="https://arxiv.org/abs/2502.06093"><img width="80" src="./files/paperpic.png" alt="Paper"></a></td>
+			      <td align="center"><a href="https://github.com/fanchao98/DeepMill"><img width="80" src="./files/github.png" alt="Code"></a></td>
+			    </tr>
+			    <tr>
+			      <td align="center"><a href="https://arxiv.org/abs/2502.06093">Paper</a></td>
+			      <td align="center"><a href="https://github.com/fanchao98/DeepMill">Code</a></td>
+			    </tr>
+			  </tbody>
+			</table>
+
+                <br>
+
+            </div>
+
+            <p>
+                <span>
+                    <o:p>&nbsp;</o:p>
+                </span>
+            </p>
+        </section>
+
+
+
+        <footer></footer>
+    </div>
+
+
+</body>
+</html>
